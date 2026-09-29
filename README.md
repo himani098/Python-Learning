@@ -1,5 +1,6 @@
 ﻿# 🐍 Python-Learning
- [Python original documentation](docs.python.org)
+ [Python Documentation](https://docs.python.org/)
+ 
 **VS code** - text editor
 **Terminal** - CLI → command line interface
 - `code file.py` → creates a file named file.py
