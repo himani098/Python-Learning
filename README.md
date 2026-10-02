@@ -338,3 +338,322 @@ str.split(" ")
 | **`+`** | Addition / string concatenation |
 | **`%`** | Modulus |
 | **`x**2`** | `x ^ 2` |
+
+# 🔀 Conditional Statements
+
+- **Conditional statements** → We ask a question and then answer it based on whether the condition is `True` or `False`.
+
+## Comparison Operators
+
+The symbols used for comparison are:
+
+```text
+==    Equal to
+!=    Not equal to
+>     Greater than
+>=    Greater than or equal to
+<     Less than
+<=    Less than or equal to
+```
+
+---
+
+## `if`
+
+- **`if`** → Used to ask a question or check a condition.
+
+Example:
+
+```python
+if x < y:
+    print("x is smaller")
+```
+
+- `x < y` → **Boolean expression**
+- A Boolean expression has a **yes or no answer**, represented as `True` or `False`.
+
+---
+
+## Boolean (`bool`)
+
+- **`bool`** → A datatype that means **True or False**.
+- Boolean values are represented as:
+  - `True`
+  - `False`
+- The first letter is always **capital** in Python.
+
+Example:
+
+```python
+x = True
+y = False
+```
+
+---
+
+## Indentation
+
+- **Indentation** → Spaces at the beginning of a line that tell Python that the line belongs to the previous block of code.
+- The indented code is executed only when the condition is `True`.
+
+Example:
+
+```python
+if x < y:
+    print("x is smaller")
+```
+
+Here, `print()` is indented, so it belongs to the `if` block.
+
+---
+
+## `:`
+
+- `:` → Used to represent the **start of a block of code**.
+- **Indentation** tells Python what is inside that block.
+
+Example:
+
+```python
+if x < y:
+    print("x is smaller")
+```
+
+Here:
+
+- `:` → Starts the block.
+- Indentation → Shows what is inside the block.
+
+---
+
+# 🔁 `if`, `elif` and `else`
+
+`if`, `elif` and `else` are **keywords** in Python.
+
+## `if`
+
+- `if` → Checks a condition.
+- Multiple `if` statements are independent, so **all the `if` statements will be checked until the end of the code**.
+
+Example:
+
+```python
+if x > 0:
+    print("Positive")
+
+if x < 10:
+    print("Less than 10")
+```
+
+Both conditions can be checked.
+
+---
+
+## `elif`
+
+- `elif` → Means **"else if"**.
+- When using an `if`/`elif` chain, Python stops checking the remaining conditions once it finds a `True` condition.
+
+Example:
+
+```python
+if x > 0:
+    print("Positive")
+elif x < 0:
+    print("Negative")
+```
+
+Once one condition is `True`, the remaining `elif` conditions are not checked.
+
+---
+
+## `else`
+
+- `else` → Runs when **all the conditions above it are `False`**.
+- It runs by default when none of the previous conditions are satisfied.
+
+Example:
+
+```python
+if x > 0:
+    print("Positive")
+elif x < 0:
+    print("Negative")
+else:
+    print("Zero")
+```
+
+---
+
+# 🔗 Logical Operators
+
+- **`and`** and **`or`** are keywords used for combining conditions.
+
+### `and`
+
+Both conditions must be `True`.
+
+```python
+if x > 0 and x < 10:
+    print("x is between 0 and 10")
+```
+
+### `or`
+
+At least one condition must be `True`.
+
+```python
+if x < 0 or x > 10:
+    print("x is outside the range")
+```
+
+---
+
+## Python's Special Comparison Feature
+
+- Python has a special feature where instead of writing two conditions and comparing them using `and` or `or`, we can sometimes combine the comparisons directly.
+
+Example:
+
+```python
+if 0 < x < 10:
+    print("x is between 0 and 10")
+```
+
+This is equivalent to:
+
+```python
+if x > 0 and x < 10:
+    print("x is between 0 and 10")
+```
+
+---
+
+# 🔢 Parity
+
+- **Parity** → Whether a number is **even or odd**.
+
+## Modulus Operator `%`
+
+- `%` → **Modulus operator**.
+- It gives the **remainder** when one number is divided by another.
+
+Example:
+
+```python
+10 % 3
+```
+
+Output:
+
+```text
+1
+```
+
+Because when `10` is divided by `3`, the remainder is `1`.
+
+---
+
+## Even Numbers
+
+- An **even number** is a number that is divisible by `2` and gives a remainder of `0`.
+
+Example:
+
+```python
+10 % 2
+```
+
+Output:
+
+```text
+0
+```
+
+Therefore, `10` is even.
+
+### Checking whether a number is even or odd
+
+```python
+if x % 2 == 0:
+    print("Even")
+else:
+    print("Odd")
+```
+
+---
+
+# 🐍 Pythonic
+
+- **Pythonic** → A term used by the Python community to describe code that follows the style, principles and idioms that are considered natural and readable in Python.
+
+- Python has many syntaxes that are closely related to **human language and English**, making Python code relatively easy to read compared with many other programming languages.
+
+---
+
+# 🔀 Match-Case
+
+- **`match`** → A keyword similar to `switch` in other programming languages.
+- Python uses **`case`** inside a `match` statement.
+
+Example:
+
+```python
+match number:
+    case 1:
+        print("One")
+    case 2:
+        print("Two")
+```
+
+---
+
+## Default Case: `_`
+
+- When we don't have a matching `case`, or we want a **default value**, we use `_`.
+
+Example:
+
+```python
+match number:
+    case 1:
+        print("One")
+    case 2:
+        print("Two")
+    case _:
+        print("Something else")
+```
+
+- `_` → Acts as the default/wildcard case in this context.
+
+### `break` and `default`
+
+- In Python's `match` statement, we **do not need to use `break`** after each case like in traditional `switch` statements.
+- We also use `_` instead of a `default` keyword.
+
+---
+
+# 📌 Conditional Statements — Quick Revision
+
+| Concept | Meaning |
+|---|---|
+| `if` | Checks a condition |
+| `elif` | Checks another condition if previous condition is false |
+| `else` | Runs when all previous conditions are false |
+| `==` | Equal to |
+| `!=` | Not equal to |
+| `>` | Greater than |
+| `>=` | Greater than or equal to |
+| `<` | Less than |
+| `<=` | Less than or equal to |
+| `and` | Both conditions must be true |
+| `or` | At least one condition must be true |
+| `bool` | Boolean datatype |
+| `True` | Boolean true value |
+| `False` | Boolean false value |
+| `%` | Modulus/remainder operator |
+| `match` | Used for pattern matching |
+| `case` | Defines a pattern/case inside `match` |
+| `_` | Default/wildcard case in `match` |
+| `:` | Starts a block |
+| Indentation | Defines what belongs to a block |
